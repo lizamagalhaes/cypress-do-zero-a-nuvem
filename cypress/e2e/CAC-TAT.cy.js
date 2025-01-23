@@ -185,3 +185,4 @@ describe('Central de Atendimento ao Cliente TAT', () => {
 })
 
 // Ao colocar o .only na frente de um teste, isso implica que apenas ele será executado
+// Para alterar o tamanho da tela ao abrir o Cypresse e simular, por exemplo, um celular, basta informar no terminal o seguinte comendo: npx cypress open --config viewportWidth=370 viewportHeight=660
