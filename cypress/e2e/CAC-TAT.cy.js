@@ -168,6 +168,20 @@ describe('Central de Atendimento ao Cliente TAT', () => {
       })
   })
 
+  it('verifica que a política de privacidade abre em outra aba sem a necessidade de um clique', () => {
+    cy.contains('a', 'Política de Privacidade')
+      .should('have.attr', 'href', 'privacy.html')
+      .and('have.attr', 'target', '_blank')
+  })
+
+  it('testa a página de política de privacidade de forma independente', () => {
+    cy.contains('a', 'Política de Privacidade')
+      .invoke('removeAttr', 'target')
+      .click()
+
+    cy.contains('h1', 'CAC TAT - Política de Privacidade').should('be.visible')
+  })
+
 })
 
 // Ao colocar o .only na frente de um teste, isso implica que apenas ele será executado
