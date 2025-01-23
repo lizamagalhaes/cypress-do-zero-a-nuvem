@@ -114,7 +114,7 @@ describe('Central de Atendimento ao Cliente TAT', () => {
       .should('be.checked', 'Feedback')
   })
 
-  it.only('marca cada tipo de atendimento', () => {
+  it('marca cada tipo de atendimento', () => {
     cy.get('input[type="radio"]')
       .each(typeOfService => {
         cy.wrap(typeOfService)
@@ -123,7 +123,26 @@ describe('Central de Atendimento ao Cliente TAT', () => {
       })
   })
 
+  it('marca ambos checkboxes, depois desmarca o último', () => {
+    cy.get('input[type="checkbox"]')
+      .check()
+      .should('be.checked')
+      .last()
+      .uncheck()
+      .should('not.be.checked')
+  })
+
+  it.only('exibe mensagem de erro quando o telefone se torna obrigatório mas não é preenchido antes do envio do formulário', () => {
+    cy.get('#firstName').type('Liza')
+    cy.get('#lastName').type('Tester')
+    cy.get('#email').type('liza@tester.com')
+    cy.get('#phone-checkbox').check()
+    cy.get('#open-text-area').type('Teste')
+    cy.contains('button', 'Enviar').click()
+    
+    cy.get('.error').should('be.visible') 
 })
 
+})
 
 // Ao colocar o .only na frente de um teste, isso implica que apenas ele será executado
