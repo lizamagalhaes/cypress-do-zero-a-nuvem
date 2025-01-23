@@ -1,28 +1,34 @@
-# 🌲 Cypress, do Zero à Nuvem ☁️
 
-👋 Seja bem-vindo(a)!
+# 🌲 Cypress, de Zero à Nuvem ☁️
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai amar esse curso. ❤️
+Ese projeto foi desenvolvido para praticar o conhecimento obtido no curso online "Cypress, do Zero à Nuvem", da escola online Talking About Testing.
 
-## O que você vai aprender?
+## Pré-requisitos
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar upload de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
-- Como executar os testes em um _workflow_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como integrar seu _workflow_ de integração contínua com o Cypress Cloud (o serviço de gestão de testes do Cypress na nuvem)
+Para clonar e rodar esse projeto, é preciso ter pré-instalado o git, Node.js e npm.
 
-## Vamos começar?
+> Foram utilizadas as versões `2.39.5`, `v22.13.0` e `10.9.2` do git, Node.js e npm, respectivamente. Sugiro que você use a mesma versão ou uma mais recente.
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+## Instalação
+
+No terminal, rode o comando `npm install` (ou `npm i` para a versão curta) para instalar as depedências de desenvolvimento.
+
+## Testes
+
+Neste projeto, será possível rodar os testes na visão desktop e mobile.
+
+### Desktop
+
+No terminal, rode o comando `npm test` (ou `npm t` para a versão curta) para executar o teste no modo headless em uma visão desktop.
+
+Ou, rode o comando `npm run cy:open` para abrir o App do Cypress App em uma visão desktop.
+
+### Mobile
+
+No terminal, rode o comando `npm run test:mobile` para executar o teste no modo headless em uma visão mobile.
+
+Ou, rode o comando `npm run cy:open:mobile` para abrir o App do Cypress App em uma visão mobile.
 
 ___
 
-Este é um curso da **Escola Talking About Testing**.
+Este projeto foi criado por Liza Magalhães
